@@ -1,1 +1,1 @@
-# XYZ-E2E-Automation
+# XYZ Bank Automation using Playwright
