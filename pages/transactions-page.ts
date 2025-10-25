@@ -3,14 +3,12 @@ import {Page, Locator} from '@playwright/test';
 
 export class TransactionsPage {
     readonly page : Page;
-    //readonly  transactions: Locator;
     readonly backButton : Locator;
     readonly resetButton : Locator;
     readonly dateTime : Locator;
     readonly amount : Locator;
     readonly transactionType : Locator;
     readonly logoutButton : Locator;
-
 
     constructor(page : Page) {
         this.page = page;
@@ -20,13 +18,9 @@ export class TransactionsPage {
         this.amount = page.getByText('Amount')
         this.transactionType = page.getByText('Transaction Type')
         this.logoutButton = page.getByRole('button', { name: 'Logout' })
-
 }
-
       async Logout() {
        await this.logoutButton.click();
    }
-
-
 }
 

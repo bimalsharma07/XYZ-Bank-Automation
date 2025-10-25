@@ -31,12 +31,10 @@ export class BankManagerDashboardPage {
         this.process = page.getByRole('button', { name: 'Process' })
         this.searchCustomer = page.getByRole('textbox', { name: 'Search Customer' })
 
-
     }
 
     async addCustomer() {
         await this.addCustomerOption.click()
-        //await this.addCustomerButton.click()
        await this.customerFirstName.fill(testData.customer.firstName)
        await this.customerLastName.fill(testData.customer.lastName)
        await this.customerPostCode.fill(testData.customer.postCode)
