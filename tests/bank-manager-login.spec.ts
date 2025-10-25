@@ -1,6 +1,4 @@
 import {test, expect} from '../fixtures/base-fixtures';
-
-
 test.describe('Bank Manager Login Flow', async() => {
 
 test('Add customer', async ({loginPage, bankManagerDashboardPage }) => {

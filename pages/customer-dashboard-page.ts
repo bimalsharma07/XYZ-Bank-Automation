@@ -16,7 +16,6 @@ export class CustomerDashboardPage {
     readonly  transactions: Locator;
     
 
-
     constructor(page: Page) {
         this.page = page;
         this.logoutButton = page.getByRole('button', { name: 'Logout' });
@@ -30,27 +29,19 @@ export class CustomerDashboardPage {
         this.withDrawalMessage = page.getByText('Transaction successful');
         this.transactions = page.getByRole('button', { name: 'Transactions' })
 
-
     }
     async deposit() {
         await this.depositButton.click()
         await this.amountInput.fill(testData.customer.depositAmount);
         await this.amountDepositButton.click();
-        
     }
 
     async withdrawl() {
         await this.withDrawlButton.click()
         await this.amountInput.fill(testData.customer.withdrawAmount);
         await this.amountwithDrawlButton.click()
-
     }
-
     async viewTransactions() {
     await this.transactions.click();
-
-    // }
-    
-
     }
 }

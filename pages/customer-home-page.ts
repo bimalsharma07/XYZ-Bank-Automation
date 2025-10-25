@@ -21,5 +21,4 @@ export class CustomerHomePage {
     async login() {
         await this.loginButton.click();
     }
-
 }
